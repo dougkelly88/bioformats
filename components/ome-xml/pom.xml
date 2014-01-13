@@ -8,7 +8,7 @@
   <parent>
     <groupId>ome</groupId>
     <artifactId>pom-scifio</artifactId>
-    <version>5.1.0-SNAPSHOT</version>
+    <version>5.0.0-SNAPSHOT</version>
     <relativePath>../..</relativePath>
   </parent>
 
@@ -77,9 +77,11 @@
 	      <executable>python</executable>
 	      <arguments>
 		<argument>${xsdfu.script}</argument>
-		<argument>omexml_model</argument>
-		<argument>--output-directory=${xsdfu.modelpath}/</argument>
-		<argument>--print-generated</argument>
+		<argument>java_classes</argument>
+		<argument>-p</argument>
+		<argument>ome.xml.model</argument>
+		<argument>-o</argument>
+		<argument>${xsdfu.modelpath}/</argument>
 		<argument>${project.rootdir}/${xsdfu.ome}</argument>
 		<argument>${project.rootdir}/${xsdfu.binaryfile}</argument>
 		<argument>${project.rootdir}/${xsdfu.roi}</argument>
@@ -99,9 +101,11 @@
 	      <executable>python</executable>
 	      <arguments>
 		<argument>${xsdfu.script}</argument>
-		<argument>omexml_model_enums</argument>
-		<argument>--output-directory=${xsdfu.modelpath}/</argument>
-		<argument>--print-generated</argument>
+		<argument>enum_types</argument>
+		<argument>-p</argument>
+		<argument>ome.xml.model.enums</argument>
+		<argument>-o</argument>
+		<argument>${xsdfu.modelpath}/</argument>
 		<argument>${project.rootdir}/${xsdfu.ome}</argument>
 		<argument>${project.rootdir}/${xsdfu.binaryfile}</argument>
 		<argument>${project.rootdir}/${xsdfu.roi}</argument>
@@ -121,9 +125,11 @@
 	      <executable>python</executable>
 	      <arguments>
 		<argument>${xsdfu.script}</argument>
-		<argument>omexml_model_enum_handlers</argument>
-		<argument>--output-directory=${xsdfu.modelpath}/</argument>
-		<argument>--print-generated</argument>
+		<argument>enum_handlers</argument>
+		<argument>-p</argument>
+		<argument>ome.xml.model.enums.handlers</argument>
+		<argument>-o</argument>
+		<argument>${xsdfu.modelpath}/</argument>
 		<argument>${project.rootdir}/${xsdfu.ome}</argument>
 		<argument>${project.rootdir}/${xsdfu.binaryfile}</argument>
 		<argument>${project.rootdir}/${xsdfu.roi}</argument>
